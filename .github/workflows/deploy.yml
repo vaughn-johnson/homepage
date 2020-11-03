@@ -1,0 +1,45 @@
+name: Deploy Homepage
+on:
+    push:
+      branches:
+          - main
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@v1
+      with:
+        ref: refs/heads/master
+        fetch-depth: 1
+
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '14'
+
+      - name: Install Modules
+      run: yarn install --frozen-lockfile
+
+      - name: Lint
+      run: yarn run lint
+
+      - name: Prettier
+        run: yarn run format
+       
+      - name: Build
+        run: yarn run build
+      
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '276.0.0'
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+      - name: Deploy 
+        run: gsutil -m rsync -d -c -r public gs://www.vivacious.dev
+      #  google serves public files with the header Cache-Control: public, max-age=3600 unless the bucket has uniform bucket-level access enabled
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://my-gcs-bucket/**/*.html
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://my-gcs-bucket/js/*.js
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://my-gcs-bucket/css/*.css
+
+      
