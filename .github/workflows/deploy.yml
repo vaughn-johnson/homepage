@@ -39,6 +39,4 @@ jobs:
       - name: Deploy 
         run: gsutil -m rsync -d -c -r public gs://www.vivacious.dev
       #  google serves public files with the header Cache-Control: public, max-age=3600 unless the bucket has uniform bucket-level access enabled
-      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://www.vivacious.dev/**/*.html
-      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://www.vivacious.dev/js/*.js
-      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://www.vivacious.dev/css/*.css
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://www.vivacious.dev/**/*
