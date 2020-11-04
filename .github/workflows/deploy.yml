@@ -13,6 +13,12 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
+
+      - uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-js-${{ hashFiles('yarn.lock') }}
+
       - name: Install Modules
         run: yarn install --frozen-lockfile
 
