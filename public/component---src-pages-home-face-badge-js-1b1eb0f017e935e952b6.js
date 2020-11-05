@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{Gb8X:function(e,t,i){"use strict";i.r(t);var s=i("q1tI"),a=i.n(s);t.default=function(e){var t=e.imageURL,i=void 0===t?"assets/images/selfie.jpg":t,s=e.style;return a.a.createElement("div",{style:Object.assign({borderRadius:"100%",overflow:"hidden",display:"inherit"},s)},a.a.createElement("img",{style:{height:"100%",width:"100%"},src:i,alt:"😉"}))}}}]);
+//# sourceMappingURL=component---src-pages-home-face-badge-js-1b1eb0f017e935e952b6.js.map
