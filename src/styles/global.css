@@ -12,8 +12,3 @@ html, body, #___gatsby {
 div[role="group"][tabindex] {
   height: 100%;
 }
-
-/* TODO: reimplement this */
-.info-button {
-  background: 'linear-gradient(45deg, #FF9E33 10%, #DE1BA8 95%)',
-}
