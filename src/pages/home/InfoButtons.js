@@ -4,7 +4,6 @@ import { infoButtons, infoButton } from "./styles";
 import { FaGithub, FaEnvelope } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-// TODO: add these to CMS
 const PDF_LINK =
   "https://storage.googleapis.com/vaughn-johnson-resume/latest.pdf";
 const GITHUB_LINK = "https://github.com/vaughn-johnson/";
