@@ -66,9 +66,12 @@ export {
   greeting,
   faceBadgeContainer,
   infoButtons,
+  infoButton,
   bodyText
 };
 
 // Gatsby requires a default export
 // to be a component or string
-export default () => <div></div>;
+
+const NullComponent = () => (<div></div>)
+export default NullComponent;
