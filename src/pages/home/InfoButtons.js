@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 // TODO: add these to CMS
 const PDF_LINK =
-  "https://storage.googleapis.com/vaughn-johnson-resume/2020-10-30.pdf";
+  "https://storage.googleapis.com/vaughn-johnson-resume/latest.pdf";
 const GITHUB_LINK = "https://github.com/vaughn-johnson/";
 const EMAIL_LINK = "mailto:v@ughn.io?subject=When%20can%20you%20start%3F";
 
