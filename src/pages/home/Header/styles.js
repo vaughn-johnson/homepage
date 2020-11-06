@@ -52,14 +52,6 @@ const infoButton = {
   display: "flex",
 };
 
-const bodyText = { 
-  fontFamily: "Poppins",
-  fontWeight: 300,
-  marginLeft: "20%",
-  marginRight: "20%",
-  fontSize: 30,
-}
-
 export {
   border,
   header,
@@ -67,7 +59,6 @@ export {
   faceBadgeContainer,
   infoButtons,
   infoButton,
-  bodyText
 };
 
 // Gatsby requires a default export

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Button from "../../components/Button";
+import Button from "components/Button";
 import { infoButtons, infoButton } from "./styles";
 import { FaGithub, FaEnvelope } from "react-icons/fa";
 import PropTypes from "prop-types";
