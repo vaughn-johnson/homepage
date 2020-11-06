@@ -22,8 +22,8 @@ const InfoButton = ({ children, alignButtonsVertically, ...props }) => {
       <Button
         style={{
           margin,
-          fontSize: isMobile ? '4vw' : '1.5vw',
-          padding: isMobile ? '4vw' : '2vw',
+          fontSize: alignButtonsVertically ? '4vw' : '1.5vw',
+          padding: alignButtonsVertically ? '4vw' : '2vw',
           ...styles.infoButton
         }}
         variant="contained"
