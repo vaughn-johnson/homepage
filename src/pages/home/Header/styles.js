@@ -27,8 +27,9 @@ const greeting = {
   flex: 1,
   textAlign: "center",
   fontWeight: 600,
-  fontSize: "5vw",
+  fontSize: "6vw",
   fontFamily: "Poppins",
+  padding: '1vw'
 };
 
 const faceBadgeContainer = {
@@ -49,7 +50,10 @@ const infoButtons = {
 
 const infoButton = {
   flex: 1,
-  display: "flex",
+  color: "#65219D",
+  fontFamily: "Poppins",
+  justifyContent: "space-around",
+  height: '2vw',
 };
 
 export {

@@ -1,26 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Button from "components/Button";
-import { infoButtons, infoButton } from "./styles";
+import * as styles from "./styles";
 import { FaGithub, FaEnvelope } from "react-icons/fa";
+import { isMobile } from 'react-device-detect';
 import PropTypes from "prop-types";
 
 const PDF_LINK =
   "https://storage.googleapis.com/vaughn-johnson-resume/latest.pdf";
 const GITHUB_LINK = "https://github.com/vaughn-johnson/";
 const EMAIL_LINK = "mailto:v@ughn.io?subject=When%20can%20you%20start%3F";
+const SMOL_WINDOW = 800;
 
-const InfoButton = ({ children, aspectRatio, ...props }) => {
-  const margin = aspectRatio > 1 ? "3vw" : "1em";
+const InfoButton = ({ children, alignButtonsVertically, ...props }) => {
+  const margin = alignButtonsVertically ? "1vw" : "3vw";
 
   return (
-    <div style={infoButton}>
+    <div style={{
+      flex: 1,
+      display: "flex",
+    }}>
       <Button
         style={{
           margin,
-          flex: 1,
-          color: "#65219D",
-          fontFamily: "Poppins",
-          justifyContent: "space-between",
+          fontSize: isMobile ? '4vw' : '1.5vw',
+          padding: isMobile ? '4vw' : '2vw',
+          ...styles.infoButton
         }}
         variant="contained"
         {...props}
@@ -48,23 +52,29 @@ const InfoButtons = () => {
     handleResize();
   });
 
-  const flexDirection = aspectRatio < 1 ? "column" : "row";
+  const alignButtonsVertically = isMobile || aspectRatio < 1 || window.innerWidth < SMOL_WINDOW;
+
+  const flexDirection = alignButtonsVertically ?  "column" : "row"; 
 
   return (
-    <div style={{ ...infoButtons, flexDirection }}>
-      <InfoButton href={PDF_LINK} aspectRatio={aspectRatio}>
+    <div style={{ ...styles.infoButtons, flexDirection }}>
+      <InfoButton href={PDF_LINK} alignButtonsVertically={alignButtonsVertically}>
         Resume
       </InfoButton>
 
-      <InfoButton href={GITHUB_LINK} aspectRatio={aspectRatio}>
+      <InfoButton href={GITHUB_LINK} alignButtonsVertically={alignButtonsVertically}>
         <FaGithub style={{ paddingRight: 5 }} /> {"   "} Github
       </InfoButton>
 
-      <InfoButton href={EMAIL_LINK} aspectRatio={aspectRatio}>
+      <InfoButton href={EMAIL_LINK} alignButtonsVertically={alignButtonsVertically}>
         <FaEnvelope style={{ paddingRight: 5 }} /> Email
       </InfoButton>
     </div>
   );
+};
+
+InfoButton.propTypes = {
+  alignButtonsVertically: PropTypes.boolean,
 };
 
 export default InfoButtons;
