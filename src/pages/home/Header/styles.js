@@ -53,7 +53,7 @@ const infoButton = {
   color: "#65219D",
   fontFamily: "Poppins",
   justifyContent: "space-around",
-  height: '2vw',
+  height: '3vw',
 };
 
 export {
