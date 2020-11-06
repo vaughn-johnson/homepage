@@ -27,8 +27,9 @@ const greeting = {
   flex: 1,
   textAlign: "center",
   fontWeight: 600,
-  fontSize: "5vw",
+  fontSize: "6vw",
   fontFamily: "Poppins",
+  padding: '1vw'
 };
 
 const faceBadgeContainer = {
@@ -49,16 +50,11 @@ const infoButtons = {
 
 const infoButton = {
   flex: 1,
-  display: "flex",
-};
-
-const bodyText = { 
+  color: "#65219D",
   fontFamily: "Poppins",
-  fontWeight: 300,
-  marginLeft: "20%",
-  marginRight: "20%",
-  fontSize: 30,
-}
+  justifyContent: "space-around",
+  height: '2vw',
+};
 
 export {
   border,
@@ -67,7 +63,6 @@ export {
   faceBadgeContainer,
   infoButtons,
   infoButton,
-  bodyText
 };
 
 // Gatsby requires a default export
