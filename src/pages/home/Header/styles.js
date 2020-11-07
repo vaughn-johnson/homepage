@@ -1,4 +1,4 @@
-import React from 'react';
+import Null from 'components/NullComponent';
 
 const border = {
   borderWidth: "1.5vw",
@@ -67,6 +67,4 @@ export {
 
 // Gatsby requires a default export
 // to be a component or string
-
-const NullComponent = () => (<div></div>)
-export default NullComponent;
+export default Null;

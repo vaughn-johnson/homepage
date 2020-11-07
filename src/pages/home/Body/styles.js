@@ -1,4 +1,4 @@
-import React from 'react';
+import Null from 'components/NullComponent';
 
 const bodyText = { 
   fontFamily: "Poppins",
@@ -14,6 +14,4 @@ export {
 
 // Gatsby requires a default export
 // to be a component or string
-
-const NullComponent = () => (<div></div>)
-export default NullComponent;
+export default Null;
