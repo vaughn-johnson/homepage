@@ -1,7 +1,6 @@
 import React from "react";
 import { bodyText } from "./styles";
-
-const SIGNATURE_URL = "assets/images/signature.png";
+;
 
 const Body = () => (
   <div
@@ -23,12 +22,6 @@ const Body = () => (
         decisions based on evidence. 
       </p>
     </div>
-
-    <img
-      style={{ height: "100%", width: "100%" }}
-      src={SIGNATURE_URL}
-      alt="😉"
-    />
   </div>
 );
 
