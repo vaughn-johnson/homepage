@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import tinygradient from 'tinygradient';
 import { colors } from 'styles';
+import * as styles from './styles';
 
 const SIGNATURE_URL = "assets/images/signature.png";
 const colorValues = [colors.orange, colors.pink];
@@ -27,27 +28,16 @@ const Footer = () => {
   });
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        marginTop: 'auto'
-      }}
-    >
-      <div
-        style={{
-          margin: '3vw'
-        }}
-      >
+    <div style={styles.footerContainer}>
+      <div style={{ margin: '3vw' }}>
         <div
           style={{
-            background: `${gradient.rgbAt(gradientPosition)}`,
-            display: 'flex',
-            margin: -3
+            ...styles.imageBackdrop,
+            background: `${gradient.rgbAt(gradientPosition)}`
           }}
         >
           <img
-            style={{ height: "calc(50px + 8vw)" , width: "auto" }}
+            style={styles.image}
             src={SIGNATURE_URL}
             alt="😉"
           />
