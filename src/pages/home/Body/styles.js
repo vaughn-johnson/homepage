@@ -2,10 +2,10 @@ import React from 'react';
 
 const bodyText = { 
   fontFamily: "Poppins",
-  fontWeight: 300,
-  marginLeft: "20%",
-  marginRight: "20%",
-  fontSize: 30,
+  fontWeight: 400,
+  marginLeft: "10vw",
+  marginRight: "10vw",
+  fontSize: 'calc(10px + 1.5vw)',
 }
 
 export {
