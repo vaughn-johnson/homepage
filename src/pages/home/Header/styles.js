@@ -1,4 +1,3 @@
-import React from 'react';
 import Null from 'components/NullComponent';
 
 const border = {

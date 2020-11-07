@@ -1,6 +1,5 @@
 import React from "react";
 import { bodyText } from "./styles";
-;
 
 const Body = () => (
   <div
@@ -11,7 +10,7 @@ const Body = () => (
   >
     <div style={bodyText}>
       <p>
-        &nbsp; &nbsp; &nbsp; &nbsp;Hi! I am a software developer and a trained
+        &nbsp; &nbsp; &nbsp; &nbsp; Hi! I am a software developer and a trained
         statistician. I have years of experience working on a product
         obsessed team, and I have a background in linguistics and physics.
       </p>
