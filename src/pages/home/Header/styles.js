@@ -1,4 +1,5 @@
 import Null from 'components/NullComponent';
+import { colors } from 'styles';
 
 const border = {
   borderWidth: "1.5vw",
@@ -9,7 +10,7 @@ const border = {
 const header = {
   ...border,
   flex: 1,
-  background: "linear-gradient(45deg, #E83385 10%, #FF9E33 95%)",
+  background: `linear-gradient(45deg, ${colors.pink} 10%, ${colors.orange} 95%)`,
   marginBottom: 50,
 
   display: "flex",
@@ -50,7 +51,7 @@ const infoButtons = {
 
 const infoButton = {
   flex: 1,
-  color: "#65219D",
+  color: colors.purple,
   fontFamily: "Poppins",
   justifyContent: "space-around",
   height: '3vw',
