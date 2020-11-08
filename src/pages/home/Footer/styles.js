@@ -1,4 +1,5 @@
 import Null from 'components/NullComponent';
+import { colors } from 'styles';
 
 const image = {
   height: "calc(50px + 8vw)",
@@ -7,7 +8,8 @@ const image = {
 
  const imageBackdrop = { 
   display: 'flex',
-  margin: -3
+  margin: -3,
+  background: `linear-gradient(45deg, ${colors.pink} , ${colors.orange})`,
 };
 
  const footerContainer = {
