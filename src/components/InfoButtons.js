@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button } from "components";
 import * as styles from "./styles";
 import { FaGithub, FaEnvelope, FaHome } from "react-icons/fa";
-import { isMobile } from 'react-device-detect';
 import PropTypes from "prop-types";
 
 const PDF_LINK =
