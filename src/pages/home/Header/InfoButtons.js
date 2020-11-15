@@ -1,44 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Button from "components/Button";
+import { ResumeButton, GithubButton, EmailButton } from "components/InfoButtons";
 import * as styles from "./styles";
-import { FaGithub, FaEnvelope } from "react-icons/fa";
 import { isMobile } from 'react-device-detect';
-import PropTypes from "prop-types";
 
-const PDF_LINK =
-  "https://storage.googleapis.com/vaughn-johnson-resume/latest.pdf";
-const GITHUB_LINK = "https://github.com/vaughn-johnson/";
-const EMAIL_LINK = "mailto:v@ughn.io?subject=When%20can%20you%20start%3F";
-const SMOL_WINDOW = 800;
-
-const InfoButton = ({ children, alignButtonsVertically, ...props }) => {
-  const margin = alignButtonsVertically ? "1vw" : "3vw";
-
-  return (
-    <div style={{
-      flex: 1,
-      display: "flex",
-    }}>
-      <Button
-        style={{
-          margin,
-          fontSize: alignButtonsVertically ? '4vw' : '1.5vw',
-          padding: alignButtonsVertically ? '4vw' : '2vw',
-          ...styles.infoButton
-        }}
-        variant="contained"
-        {...props}
-      >
-        {children}
-      </Button>
-    </div>
-  );
-};
-
-InfoButton.propTypes = {
-  children: PropTypes.string.isRequired,
-  aspectRatio: PropTypes.number.isRequired,
-};
+const SMOL_WINDOW = 900;
 
 const InfoButtons = () => {
   const [aspectRatio, setAspectRatio] = useState(0);
@@ -58,23 +23,13 @@ const InfoButtons = () => {
 
   return (
     <div style={{ ...styles.infoButtons, flexDirection }}>
-      <InfoButton href={PDF_LINK} alignButtonsVertically={alignButtonsVertically}>
-        Resume
-      </InfoButton>
+      <ResumeButton />
 
-      <InfoButton href={GITHUB_LINK} alignButtonsVertically={alignButtonsVertically}>
-        <FaGithub style={{ paddingRight: 5 }} /> {"   "} Github
-      </InfoButton>
+      <GithubButton />
 
-      <InfoButton href={EMAIL_LINK} alignButtonsVertically={alignButtonsVertically}>
-        <FaEnvelope style={{ paddingRight: 5 }} /> Email
-      </InfoButton>
+      <EmailButton />
     </div>
   );
-};
-
-InfoButton.propTypes = {
-  alignButtonsVertically: PropTypes.boolean,
 };
 
 export default InfoButtons;

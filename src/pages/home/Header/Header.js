@@ -8,7 +8,7 @@ const Header = () => (
     <div style={greeting}>{"Hi, I'm Vaughn!"}</div>
 
     <div style={faceBadgeContainer}>
-      <FaceBadge style={{ ...border, transform: "translateY(20%)" }} />
+      <FaceBadge style={{ ...border }} />
     </div>
 
     <InfoButtons />

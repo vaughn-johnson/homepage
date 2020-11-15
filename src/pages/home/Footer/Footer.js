@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './styles';
 
-const SIGNATURE_URL = "assets/images/signature.png";
+const SIGNATURE_URL = "assets/images/signature_invert.png";
 
 const Footer = () => {
   return (
