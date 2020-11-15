@@ -6,7 +6,7 @@ import Footer from './Footer';
 const Home = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: '100%' }}>
-      <Header style={{ flex: 1 }}/>
+      <Header/>
       <Body style={{ flex: 3, flexGrow: 1 }}/>
       <Footer style={{ flex: 1 }}/>
     </div>
