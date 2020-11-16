@@ -17,8 +17,8 @@ const infoButton = {
   flex: 1,
   color: colors.purple,
   fontFamily: "Poppins",
+  fontSize: 'calc(1vw + 0.5em)',
   padding: 0,
-  margin: 'calc(2vw + 5px)',
 };
 
 const infoButtonChildContainer = {

@@ -2,66 +2,56 @@ import Null from 'components/NullComponent';
 import { colors } from 'styles';
 
 const border = {
-  borderWidth: "1.5vw",
+  borderWidth: "20px",
   borderColor: "white",
   borderStyle: "solid",
 };
 
-const header = {
-  ...border,
+const greetingContainer = {
   flex: 1,
-  background: `linear-gradient(45deg, ${colors.pink} 10%, ${colors.orange} 95%)`,
-  marginBottom: 50,
+  width: '100%',
 
   display: "flex",
-  flexDirection: "row",
   alignItems: "center",
-  justifyContent: "center",
-
-  borderTop: 0,
-  borderLeft: 0,
-  borderRight: 0,
+  justifyContent: "space-around",
 };
 
-const greeting = {
+const greetingText = {
   color: "white",
-  flex: 1,
   textAlign: "center",
   fontWeight: 600,
   fontSize: "7vw",
   fontFamily: "Poppins",
-  padding: '1vw'
 };
 
 const faceBadgeContainer = {
   display: "flex", //Neccesary to keep the selfie a circle
-  flex: 1,
   maxWidth: 300,
   maxHeight: 300,
+  padding: '3vw'
 };
 
-const infoButtons = {
-  flex: 1,
-  display: "flex",
+const buttonContainer = {
+  display: 'flex',
   justifyContent: "space-around",
   alignItems: "center",
+  padding: '3vw'
 };
 
-const infoButton = {
-  flex: 1,
-  color: colors.purple,
-  fontFamily: "Poppins",
-  justifyContent: "space-around",
-  height: '3vw',
+const headerContainer = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  background: `linear-gradient(45deg, ${colors.pink} 10%, ${colors.orange} 95%)`
 };
 
 export {
   border,
-  header,
-  greeting,
+  greetingContainer,
+  greetingText,
   faceBadgeContainer,
-  infoButtons,
-  infoButton,
+  buttonContainer,
+  headerContainer
 };
 
 // Gatsby requires a default export
