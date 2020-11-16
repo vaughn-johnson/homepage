@@ -11,15 +11,17 @@ const EMAIL_LINK = "mailto:v@ughn.io?subject=When%20can%20you%20start%3F";
 
 const InfoButton = ({ children, ...props }) => {
   return (
-    <Button
-      style={styles.infoButton}
-      variant="contained"
-      {...props}
-    >
-      <div style={styles.infoButtonChildContainer}>
-        {children}
-      </div>
-    </Button>
+    <div>
+      <Button
+        style={styles.infoButton}
+        variant="contained"
+        {...props}
+      >
+        <div style={styles.infoButtonChildContainer}>
+          {children}
+        </div>
+      </Button>
+    </div>
   );
 };
 
