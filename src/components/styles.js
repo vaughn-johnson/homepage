@@ -2,7 +2,7 @@ import Null from 'components/NullComponent';
 import { colors } from 'styles';
 
 const header = { 
-  height: 'calc(10vw + 50px)',
+  height: 'calc(5vw + 50px)',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -29,12 +29,25 @@ const infoButtonChildContainer = {
   paddingRight: 'calc(5px + 3vw)',
   paddingTop: 'calc(5px + 0.5vw)',
   paddingBottom: 'calc(5px + 0.5vw)',
-}
+};
+
+const blurryTextBox = {
+  color: "white",
+  textAlign: "center",
+  fontWeight: 800,
+  fontSize: "4.5vw",
+  fontFamily: "Poppins",
+  backdropFilter: 'blur(50px)',
+  WebkitBackdropFilter: 'blur(70px)',
+  margin: '7vw',
+  padding: '1vw'
+};
 
 export {
   header,
   infoButton,
-  infoButtonChildContainer
+  infoButtonChildContainer,
+  blurryTextBox,
 };
 
 // Gatsby requires a default export
