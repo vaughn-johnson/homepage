@@ -10,3 +10,20 @@ html, body, #___gatsby {
 div[role="group"][tabindex] {
   height: 100%;
 }
+
+/* KEEP COLORS IN SYNC WITH colors.js */
+a:link {
+  color: #FF9E33
+}
+
+a:visited {
+  color: #65219D
+}
+
+a:hover {
+  color: #fade0f
+}
+
+a:active {
+  color: #E83385
+}
