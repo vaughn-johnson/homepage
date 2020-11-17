@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "components";
-import * as styles from "./styles";
+import { infoButton, infoButtonChildContainer } from "./styles";
 import { FaGithub, FaEnvelope, FaHome } from "react-icons/fa";
 import PropTypes from "prop-types";
 
@@ -13,11 +13,11 @@ const InfoButton = ({ children, ...props }) => {
   return (
     <div>
       <Button
-        style={styles.infoButton}
+        style={infoButton}
         variant="contained"
         {...props}
       >
-        <div style={styles.infoButtonChildContainer}>
+        <div style={infoButtonChildContainer}>
           {children}
         </div>
       </Button>
