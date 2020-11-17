@@ -1,3 +1,4 @@
+// KEEP COLORS IN SYNC WITH global.css
 const colors = {
   pink: '#E83385',
   orange: '#FF9E33',
