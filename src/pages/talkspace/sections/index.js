@@ -1,8 +1,10 @@
 import Null from 'components/NullComponent';
 import Introduction from './Introduction';
+import GettingTheData from './GettingTheData';
 
 export {
-  Introduction
+  Introduction,
+  GettingTheData,
 };
 
 // Gatsby requires a default export
