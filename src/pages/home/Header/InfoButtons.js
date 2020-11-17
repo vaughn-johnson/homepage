@@ -1,5 +1,5 @@
 import React from "react";
-import { ResumeButton, GithubButton, EmailButton } from "components/InfoButtons";
+import { ResumeButton, GithubButton, EmailButton } from "components/Header/InfoButtons";
 import * as styles from "./styles";
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import * as styles from './styles';
+import { title as titleStyle, subTitle as subTitleStyle } from './styles';
 import PropTypes from "prop-types";
 
 const Title = ({ title, subtitle }) => (
   <div>
-    <p style={styles.title}>{title}</p>
-    <p style={styles.subTitle}>{subtitle}</p>
+    <p style={titleStyle}>{title}</p>
+    <p style={subTitleStyle}>{subtitle}</p>
   </div>
 );
 

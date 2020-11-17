@@ -31,23 +31,10 @@ const infoButtonChildContainer = {
   paddingBottom: 'calc(5px + 0.5vw)',
 };
 
-const blurryTextBox = {
-  color: "white",
-  textAlign: "center",
-  fontWeight: 800,
-  fontSize: "4.5vw",
-  fontFamily: "Poppins",
-  backdropFilter: 'blur(50px)',
-  WebkitBackdropFilter: 'blur(70px)',
-  margin: '7vw',
-  padding: '1vw'
-};
-
 export {
   header,
   infoButton,
   infoButtonChildContainer,
-  blurryTextBox,
 };
 
 // Gatsby requires a default export
