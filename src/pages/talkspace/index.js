@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { TitleCard, Header } from 'components';
 import {
   Introduction
@@ -14,3 +15,9 @@ const Talkspace = () => (
 
 export default Talkspace;
 
+=======
+
+const Talkspace = () => (<div>Talkspace</div>);
+
+export default Talkspace;
+>>>>>>> fad95d1 (New resuable Header component (#8))
