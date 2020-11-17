@@ -1,6 +1,6 @@
 import Button from './Button';
-import Header from './Header/Header';
-import TitleCard from './TitleCard/TitleCard';
+import Header from './Header';
+import TitleCard from './TitleCard';
 import Section from './Section';
 import NullComponent from './NullComponent';
 
