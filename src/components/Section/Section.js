@@ -1,11 +1,11 @@
 import React from 'react';
 import Title from './Title';
-import * as styles from './styles';
+import { section } from './styles';
 import PropTypes from "prop-types";
 
 const Section = ({title, subtitle, children}) => (
   <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-    <div style={styles.section}>
+    <div style={section}>
       <Title title={title} subtitle={subtitle} />
       {children}
     </div>

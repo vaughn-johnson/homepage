@@ -1,10 +1,10 @@
 import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import PropTypes from "prop-types";
-import * as styles from './styles';
+import { blurryTextBox } from './styles';
 
 const BlurryTextBox = ({ children }) => (
-  <div style={styles.blurryTextBox}>
+  <div style={blurryTextBox}>
     {children}
   </div>
 );
