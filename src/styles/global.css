@@ -27,3 +27,15 @@ a:hover {
 a:active {
   color: #E83385
 }
+
+li {
+  text-indent: 0;
+}
+
+code {
+  background-color: #ddd;
+  border: 3px solid #ddd;
+  border-radius: 10%;
+  font-family: 'Fira Code';
+  font-size: 0.7em
+}

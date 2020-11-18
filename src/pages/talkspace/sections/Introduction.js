@@ -1,4 +1,3 @@
-/* react/no-unescaped-entities */
 import React from 'react';
 import { Section } from 'components';
 

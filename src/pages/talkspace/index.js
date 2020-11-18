@@ -1,7 +1,8 @@
 import React from 'react';
 import { TitleCard, Header } from 'components';
 import {
-  Introduction
+  Introduction,
+  GettingTheData
 } from './sections';
 
 const Talkspace = () => (
@@ -9,6 +10,7 @@ const Talkspace = () => (
     <Header />
     <TitleCard image='assets/images/talkspace/pills.jpg'>Mining my own therapy data</TitleCard>
     <Introduction />
+    <GettingTheData />
   </div>
 );
 
