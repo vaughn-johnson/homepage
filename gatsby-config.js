@@ -5,7 +5,8 @@ module.exports = {
       options: {
         fonts: [
           `poppins`,
-          `crimson text`
+          `crimson text`,
+          `fira code`
         ],
         display: 'swap'
       }
