@@ -26,8 +26,7 @@ const InfoButton = ({ children, ...props }) => {
 };
 
 InfoButton.propTypes = {
-  children: PropTypes.string.isRequired,
-  aspectRatio: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 const ResumeButton = () => (

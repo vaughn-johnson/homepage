@@ -33,9 +33,5 @@ li {
 }
 
 code {
-  background-color: #ddd;
-  border: 3px solid #ddd;
-  border-radius: 10%;
-  font-family: 'Fira Code';
-  font-size: 0.7em
+  font-size: 0.85em;
 }

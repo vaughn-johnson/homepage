@@ -15,42 +15,44 @@ const GettingTheData = () => (
       history, and I could write something using selenium or detox to automatically
       scroll to the beginning. However, this approach isn&apos;t ideal
       for two main reasons:
-        <ol>
-          <li>
-            There is a lot of complexity to take on to write a <b>fragile</b> automated
-            worker to run through the UI and scrape my data for me, and having that features
-            seems crucial for this project to be useful to other people
-          </li>
-          <li>
-            The HTML representation does not match up very with the abstraction I&apos;m trying
-            to work with, which is individual messages with consistent fields {'like '}
-            <code>author</code>{' or '}<code>created_at</code>.
-          </li>
-        </ol>
-      
-      <CaptionedImage
-        src="assets/images/talkspace/blurred-messages.png"
-        caption="The HTML has totally distinct concerns from what I'm trying to do"
-      />
+    </p>
+    <ol>
+      <li>
+        There is a lot of complexity to take on to write a <b>fragile</b> automated
+        worker to run through the UI and scrape my data for me, and having that features
+        seems crucial for this project to be useful to other people
+      </li>
+      <li>
+        The HTML representation does not match up very with the abstraction I&apos;m trying
+        to work with, which is individual messages with consistent fields {'like '}
+        <code>author</code>{' or '}<code>created_at</code>.
+      </li>
+    </ol>
+    
+    <CaptionedImage
+      src="assets/images/talkspace/blurred-messages.png"
+      caption="The HTML has totally distinct concerns from what I'm trying to do"
+    />
 
+    <p>
       So, abandoning that idea, I think it makes sense to try to call Talkspace&apos;s API directly.
 
       I can figure out what endpoints to hit by watching what calls the application makes using
       the network tab in Chrome,
-
-      <CaptionedImage
-        src="assets/images/talkspace/network-tab.png"
-        caption="I can see what calls the application makes"
-      />
-
-      and then I can try to replicate the procedure the application uses through trial and error
-      in an application like Postman
-        
-      <CaptionedImage
-        src="assets/images/talkspace/postman.png"
-        caption="The results of trial and error: a successful call to Talkspace"
-      />
     </p>
+
+    <CaptionedImage
+      src="assets/images/talkspace/network-tab.png"
+      caption="I can see what calls the application makes"
+    />
+
+    and then I can try to replicate the procedure the application uses through trial and error
+    in an application like Postman
+      
+    <CaptionedImage
+      src="assets/images/talkspace/postman.png"
+      caption="The results of trial and error: a successful call to Talkspace"
+    />
     <p>
       Now that I have that working, I can build a tool that anyone can use to scrape his
       or her data. That tool is

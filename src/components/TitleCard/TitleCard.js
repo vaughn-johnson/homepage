@@ -15,7 +15,7 @@ BlurryTextBox.propTypes = {
 
 const TitleCard = ({ children, image }) => (
   <ParallaxBanner
-    layers={[{ image, amount: -0.7 }]}
+    layers={[{ image, amount: -0.9 }]}
     style={{ height: 'calc(30vw + 50px)' }}
   >
     <BlurryTextBox>{children}</BlurryTextBox>

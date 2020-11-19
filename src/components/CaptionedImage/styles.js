@@ -1,4 +1,4 @@
-import Null from 'components';
+import { Null } from 'components';
 import { colors } from 'styles';
 
 const caption = {

@@ -15,7 +15,7 @@ const Section = ({title, subtitle, children}) => (
 Section.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  children: PropTypes.element
+  children: PropTypes.node
 };
 
 
