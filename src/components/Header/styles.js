@@ -1,4 +1,4 @@
-import { Null } from 'components';
+import Null from 'components/NullComponent';
 import { colors } from 'styles';
 
 const header = { 

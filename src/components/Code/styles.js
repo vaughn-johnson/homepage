@@ -1,4 +1,4 @@
-import { Null } from 'components';
+import Null from 'components/NullComponent';
 
 const container = {
   textIndent: 0,
