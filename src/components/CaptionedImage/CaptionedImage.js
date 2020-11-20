@@ -16,7 +16,7 @@ const CaptionedImage = ({ src, caption }) => (
 
 CaptionedImage.propTypes = {
   src: PropTypes.string.isRequired,
-  caption: PropTypes.number.isRequired,
+  caption: PropTypes.string.isRequired,
 };
 
 export default CaptionedImage;

@@ -17,7 +17,7 @@ const FaceBadge = ({ imageURL = SELFIE_URL, style }) => (
 );
 
 FaceBadge.propTypes = {
-  imageURL: PropTypes.string.isRequired,
+  imageURL: PropTypes.string,
   style: PropTypes.object,
 };
 

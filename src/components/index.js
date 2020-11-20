@@ -2,8 +2,10 @@ import Button from './Button';
 import Header from './Header/Header';
 import TitleCard from './TitleCard/TitleCard';
 import Section from './Section';
-import NullComponent from './NullComponent';
+import Null from './NullComponent';
 import CaptionedImage from './CaptionedImage';
+import Code from './Code';
+import Plot from './Plot';
 
 export {
   Button,
@@ -11,5 +13,7 @@ export {
   TitleCard,
   Section,
   CaptionedImage,
-  NullComponent
+  Code,
+  Plot,
+  Null
 };
