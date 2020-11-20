@@ -1,5 +1,5 @@
 const path = require('path')
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -9,5 +9,13 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         scss: path.resolve(__dirname, 'src/scss'),
       },
     },
+    module: {
+      rules: [
+        {
+          test: /plotly.js/,
+          use: loaders.null(),
+        }
+      ]
+    }
   })
 }
