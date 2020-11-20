@@ -1,6 +1,7 @@
 import React from 'react';
 import { colors } from 'styles';
 import { Section, Code, Plot } from 'components';
+import PropTypes from "prop-types";
 
 const ExploringMyData = ({ messageData }) => (
   <Section
@@ -8,9 +9,9 @@ const ExploringMyData = ({ messageData }) => (
     subtitle="Cleaning and exploring my message history"
   >
     <p>
-      Now that I have my data, let's explore it. The data I have is in the form of an
+      Now that I have my data, let&apos;s explore it. The data I have is in the form of an
       array of JSON objects, each with identical structures representing one individual
-      "text" exchanged in Talkspace. The messages I scraped include automated messages
+       &quot;text &quot; exchanged in Talkspace. The messages I scraped include automated messages
       from the application itself prompting me to fill out forms and questionaires. Luckily,
       knowing which texts are sent from a human and which are not is also pertinent to the
       application, so Talkspace denotes these different modes of message with a field
@@ -18,7 +19,7 @@ const ExploringMyData = ({ messageData }) => (
       eliminates around 10% of the messages I downloaded. Hurray! Smaller problem space!
     </p>
     <p>
-      I'm providing some code samples in Python from the notebook I used to do the original analysis.
+      I&apos;m providing some code samples in Python from the notebook I used to do the original analysis.
       To see the original Jupyter notebook in Python or R,
       look <b><a href="https://github.com/vaughn-johnson/talkspace-notebooks/">here</a></b>.
     </p>
@@ -51,17 +52,17 @@ messages = pd.DataFrame([
 
     <ul>
       <li>
-        Talkspace doesn't have a threaded reply feature, so I tend to quote my therapist at
-        the beginning of our messages. Luckily, I always delimit these quotations with a '<code>{'>'}</code>'.
+        Talkspace doesn&apos;t have a threaded reply feature, so I tend to quote my therapist at
+        the beginning of our messages. Luckily, I always delimit these quotations with a <code>{'>'}</code>.
       </li>
       <li>
-        My therpist consistently greets me with '<code>Vaughn, ...</code>', and signs off
+        My therpist consistently greets me with <code>Vaughn, ...</code>, and signs off
         with <code>Respectfully, Dallas</code>
       </li>
     </ul>
 
     <p>
-      I can easily remove these instances with some regex. Because I'm only dealing with a few
+      I can easily remove these instances with some regex. Because I&apos;m only dealing with a few
       hundred kilobytes, I even have the convience of doing it in memory!
     </p>
 
@@ -97,10 +98,10 @@ messages.message = messages.message.apply(
     />
 
     <p>
-      Now that I have some relatively clean text, it's time to consolidate consecutive messages
+      Now that I have some relatively clean text, it&apos;s time to consolidate consecutive messages
       to make analysis simpler. Nearly alwasy, I will respond to my therapist with multiple messages.
       Each individual message is part of a single reponse, but in the data I scraped, they appear
-      as individual records. The abstraction I'd like to work with is that each 
+      as individual records. The abstraction I&apos;d like to work with is that each 
       consecutive <i>block</i> of messages from the same person is considered an individual response.
       I can then redefine some basic aspects of these messages in terms of aggregate functions like
       concatenation, minimum, etc.
@@ -192,7 +193,7 @@ message_blocks['word_count'] / message_blocks['response_time']
     /> 
     <p>
       Great! Now that I have a handful of features to look at, I can start to make some plots!
-      I'll start by plotting the distributions of the featuers I just extracted. 
+      I&apos;ll start by plotting the distributions of the featuers I just extracted. 
     </p>
 
     <p>
@@ -219,7 +220,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 5 },
-          marker: { color: colors.orange + 'cc' }
+          marker: { color: colors.orange }
         },
         {
           name: 'My therapist',
@@ -227,7 +228,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 5 },
-          marker: { color: colors.pink + 'cc' }
+          marker: { color: colors.pink }
         }
       ]}
     />
@@ -253,7 +254,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 1 },
-          marker: { color: colors.orange + 'cc' }
+          marker: { color: colors.orange }
         },
         {
           name: 'My therapist',
@@ -261,7 +262,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 1 },
-          marker: { color: colors.pink + 'cc' }
+          marker: { color: colors.pink }
         }
       ]}
     />
@@ -282,7 +283,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 1000 },
-          marker: { color: colors.orange + 'cc' }
+          marker: { color: colors.orange }
         },
         {
           name: 'My therapist',
@@ -290,7 +291,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 1000 },
-          marker: { color: colors.pink + 'cc' }
+          marker: { color: colors.pink }
         }
       ]}
     />
@@ -311,7 +312,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 100 },
-          marker: { color: colors.orange + 'cc' }
+          marker: { color: colors.orange }
         },
         {
           name: 'My therapist',
@@ -319,16 +320,16 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 100 },
-          marker: { color: colors.pink + 'cc' }
+          marker: { color: colors.pink }
         }
       ]}
     />
 
     <p>
-      The features I'm intersted in explaing (response time and word count per day)
-      both show noticeable differences across my therapist's messages and my own.
+      The features I &apos;m intersted in explaing (response time and word count per day)
+      both show noticeable differences across my therapist &apos;s messages and my own.
       My response times are much more variable, and on average much longer than
-      my therapist's.
+      my therapist &apos;s.
 
     </p>
 
@@ -348,7 +349,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 1 },
-          marker: { color: colors.orange + 'cc' }
+          marker: { color: colors.orange }
         },
         {
           name: 'My therapist',
@@ -356,7 +357,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 1 },
-          marker: { color: colors.pink + 'cc' }
+          marker: { color: colors.pink }
         }
       ]}
     />
@@ -377,7 +378,7 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 2000 },
-          marker: { color: colors.orange + 'cc' }
+          marker: { color: colors.orange }
         },
         {
           name: 'My therapist',
@@ -385,12 +386,12 @@ message_blocks['word_count'] / message_blocks['response_time']
           type: 'histogram',
           histnorm: 'probability',
           xbins: { size: 2000 },
-          marker: { color: colors.pink + 'cc' }
+          marker: { color: colors.pink }
         }
       ]}
     />
     <p>
-      Now I'd like to look at the relationship between current and previous messages. For example,
+      Now I &apos;d like to look at the relationship between current and previous messages. For example,
       I want to plot the relationship between the readability of a message sent from my therapist
       and the length of my response. If you have trouble reading this plot, you can see a larger,
       zoomable version <a href="https://storage.googleapis.com/vaughn-public-talksapce-data/pair%20plots.png">here</a>.
@@ -439,11 +440,11 @@ message_blocks['word_count'] / message_blocks['response_time']
     />
     <p>
       As you can see from the plots, there is a slight relationship between previous word count and question
-      count, which seems plausible. Other than that, there isn't an obvious relationship anywhere.
+      count, which seems plausible. Other than that, there isn &apos;t an obvious relationship anywhere.
     </p>
     <p>
-      Finally, I'd like to look at my messages overd time, 
-      which should give a sense of how I've used the service over the last year
+      Finally, I &apos;d like to look at my messages overd time, 
+      which should give a sense of how I &apos;ve used the service over the last year
     </p>
     <Plot
       layout={{
@@ -482,11 +483,15 @@ message_blocks['word_count'] / message_blocks['response_time']
       being exchanged between my therapist and me.
     </p>
     <p>
-      Again, I've provided the R and Python notebooks I originally used to do these analyses. If you'd
-      like to play with the data yourself, or just get a better view of the plots, I'd
+      Again, I &apos;ve provided the R and Python notebooks I originally used to do these analyses. If you &apos;d
+      like to play with the data yourself, or just get a better view of the plots, I &apos;d
       highly encourage <b><a href="https://github.com/vaughn-johnson/talkspace-notebooks/">checking them out</a></b>.
     </p>
   </Section>
 );
+
+ExploringMyData.propTypes = {
+  messageData: PropTypes.object
+}
 
 export default ExploringMyData; 

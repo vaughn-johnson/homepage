@@ -26,8 +26,9 @@ const WrappedPlot = ({ hasData, ...props }) => {
   return (<UhOh />);
 };
 
-Plot.propTypes = {
+WrappedPlot.propTypes = {
   hasData: PropTypes.bool,
+  layout: PropTypes.object
 }
 
 export default WrappedPlot; 
