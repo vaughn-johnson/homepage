@@ -1,5 +1,10 @@
 import React from 'react';
 import { Section, CaptionedImage } from 'components';
+import BlurredMessages from 'assets/images/talkspace/blurred-messages.png';
+import NetworkTab from 'assets/images/talkspace/network-tab.png';
+import Postman from 'assets/images/talkspace/postman.png';
+
+
 
 const GettingTheData = () => (
   <Section
@@ -30,7 +35,7 @@ const GettingTheData = () => (
     </ol>
     
     <CaptionedImage
-      src="assets/images/talkspace/blurred-messages.png"
+      src={BlurredMessages}
       caption="The HTML has totally distinct concerns from what I'm trying to do"
     />
 
@@ -42,7 +47,7 @@ const GettingTheData = () => (
     </p>
 
     <CaptionedImage
-      src="assets/images/talkspace/network-tab.png"
+      src={NetworkTab}
       caption="I can see what calls the application makes"
     />
 
@@ -50,7 +55,7 @@ const GettingTheData = () => (
     in an application like Postman
       
     <CaptionedImage
-      src="assets/images/talkspace/postman.png"
+      src={Postman}
       caption="The results of trial and error: a successful call to Talkspace"
     />
     <p>

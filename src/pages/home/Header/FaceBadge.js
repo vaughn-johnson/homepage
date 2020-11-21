@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Selfie from 'assets/images/selfie.jpg';
 
-const SELFIE_URL = "assets/images/selfie.jpg";
-
-const FaceBadge = ({ imageURL = SELFIE_URL, style }) => (
+const FaceBadge = ({ style }) => (
   <div
     style={{
       borderRadius: "100%",
@@ -12,12 +11,11 @@ const FaceBadge = ({ imageURL = SELFIE_URL, style }) => (
       ...style,
     }}
   >
-    <img style={{ height: "100%", width: "100%" }} src={imageURL} alt="😉" />
+    <img style={{ height: "100%", width: "100%" }} src={Selfie} alt="😉" />
   </div>
 );
 
 FaceBadge.propTypes = {
-  imageURL: PropTypes.string,
   style: PropTypes.object,
 };
 

@@ -12,8 +12,16 @@ const errorMessage = {
   marginBottom: '10%'
 };
 
+const loadingContainer = {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-around'
+}
+
 export {
-  errorMessage 
+  errorMessage,
+  loadingContainer
 };
 
 export default Null;
