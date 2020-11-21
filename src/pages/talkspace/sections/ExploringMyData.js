@@ -3,7 +3,7 @@ import { colors } from 'styles';
 import { Section, Code, Plot } from 'components';
 import PropTypes from "prop-types";
 
-const ExploringMyData = ({ messageData }) => (
+const ExploringMyData = ({ messageData, loading, loadFailed }) => (
   <Section
     title="Exploring my data"
     subtitle="Cleaning and exploring my message history"
@@ -206,7 +206,8 @@ message_blocks['word_count'] / message_blocks['response_time']
       As you can see, the readability scores follow a roughly normal distribution
     </p>
     <Plot
-      hasData={messageData && messageData?.readability?.length}
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{ 
         title: "Flesch Readability Scores",
         xaxis: { title: 'Greater values indicate greater readability', rangemode: 'normal' },
@@ -240,7 +241,8 @@ message_blocks['word_count'] / message_blocks['response_time']
   
     {/* ============== Question count ==========================   */}
     <Plot
-      hasData={messageData && messageData?.question_count?.length}
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{ 
         title: "Number of questions asked",
         xaxis: { title: 'Count of occurences of "?"', rangemode: 'normal' },
@@ -269,7 +271,8 @@ message_blocks['word_count'] / message_blocks['response_time']
 
     {/* ============== Message Length ==========================   */}
     <Plot
-      hasData={messageData && messageData?.message_length?.length}
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{ 
         title: "Message Length",
         xaxis: { title: 'character count', rangemode: 'normal' },
@@ -298,7 +301,8 @@ message_blocks['word_count'] / message_blocks['response_time']
   
     {/* ============== Word Count ==========================   */}
     <Plot
-      hasData={messageData && messageData?.word_count?.length}
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{ 
         title: "Word Count",
         xaxis: { title: 'words', rangemode: 'normal' },
@@ -335,7 +339,8 @@ message_blocks['word_count'] / message_blocks['response_time']
 
     {/* ============== Response Time ==========================   */}
     <Plot
-      hasData={messageData && messageData?.response_time?.length}
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{ 
         title: "Response Time",
         xaxis: { title: 'days', rangemode: 'normal' },
@@ -364,7 +369,8 @@ message_blocks['word_count'] / message_blocks['response_time']
 
     {/* ============== Words per day ==========================   */}
     <Plot
-      hasData={messageData && messageData?.words_per_day?.length}
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{ 
         title: "Word count in response per time it took to respond",
         xaxis: { title: 'words / day', rangemode: 'normal' },
@@ -397,12 +403,13 @@ message_blocks['word_count'] / message_blocks['response_time']
       zoomable version <a href="https://storage.googleapis.com/vaughn-public-talksapce-data/pair%20plots.png">here</a>.
     </p>
     <Plot
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{
         title: "Pair Plots (orange indicates me, pink indicates my therapist)",
         font: { size: 8 },
       }}
       style={{ height: 700 }}
-      hasData={messageData}
       data={[
         {
           type: 'splom',
@@ -447,10 +454,11 @@ message_blocks['word_count'] / message_blocks['response_time']
       which should give a sense of how I &apos;ve used the service over the last year
     </p>
     <Plot
+      loading={loading}
+      loadFailed={loadFailed}
       layout={{
         title: "Message lengths over time (size indicates response time)",
       }}
-      hasData={messageData}
       data={[
         {
           type: 'scatter',
@@ -491,7 +499,9 @@ message_blocks['word_count'] / message_blocks['response_time']
 );
 
 ExploringMyData.propTypes = {
-  messageData: PropTypes.object
+  messageData: PropTypes.object,
+  loading: PropTypes.bool,
+  loadFailed: PropTypes.bool
 }
 
 export default ExploringMyData; 

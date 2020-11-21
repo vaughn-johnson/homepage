@@ -1,5 +1,6 @@
 import React from 'react';
-import Plot from 'react-plotly.js';
+import Plot from 'components/Plotly';
+import BarLoader from 'react-spinners/BarLoader';
 import * as plotlyStyles from './plotlyStyles';
 import PropTypes from "prop-types";
 import * as styles from './styles';
@@ -10,24 +11,34 @@ const UhOh = () => (
   </div>
 );
 
-const WrappedPlot = ({ hasData, ...props }) => {
-  if(hasData) {
-    const layout = {
-      ...plotlyStyles.font,
-      autosize: true,
-      ...props.layout
-    }
-    return (
-      <div style={{ paddingTop: '3vh', paddingBottom: '3vh', maxWidth: '90vw' }}>
-        <Plot style={{ width: '100%' }} {...{...props, layout, useResizeHandler: true }} />
-      </div>
-    );
+const WrappedPlot = ({ loading, loadFailed, ...props }) => {
+  if(loading) return (
+    <div style={styles.loadingContainer}>
+      <BarLoader />
+    </div> 
+  );
+
+  if(loadFailed) return (<UhOh />);
+  
+  const layout = {
+    ...plotlyStyles.font,
+    autosize: true,
+    ...props.layout
   }
-  return (<UhOh />);
+
+  const data = props.data.map((datum) => ({ opacity: 0.7, ...datum }));
+
+  return (
+    <div style={{ paddingTop: '3vh', paddingBottom: '3vh', maxWidth: '90vw' }}>
+      <Plot style={{ width: '100%' }} {...{...props, data, layout, useResizeHandler: true }} />
+    </div>
+  );
 };
 
 WrappedPlot.propTypes = {
-  hasData: PropTypes.bool,
+  loading: PropTypes.bool,
+  loadFailed: PropTypes.bool,
+  data: PropTypes.array,
   layout: PropTypes.object
 }
 
