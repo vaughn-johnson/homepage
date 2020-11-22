@@ -3,7 +3,8 @@ import { TitleCard, Header } from 'components';
 import {
   Introduction,
   GettingTheData,
-  ExploringMyData
+  ExploringMyData,
+  RegressionAnalysis
 } from './sections';
 import axios from 'axios';
 import Pills from 'assets/images/talkspace/pills.jpg';
@@ -51,6 +52,11 @@ const Talkspace = () => {
       <Introduction />
       <GettingTheData />
       <ExploringMyData
+        messageData={messageData}
+        loading={loading}
+        loadFailed={loadFailed}
+      />
+      <RegressionAnalysis
         messageData={messageData}
         loading={loading}
         loadFailed={loadFailed}
