@@ -1,15 +1,44 @@
 import Null from 'components/NullComponent';
 
 const bodyText = { 
-  fontFamily: "Poppins",
+  fontFamily: "Crimson Text",
   fontWeight: 400,
-  marginLeft: "10vw",
-  marginRight: "10vw",
+  maxWidth: 700,
   fontSize: 'calc(10px + 1.5vw)',
-}
+  padding: '5vw'
+};
+
+const centerContainer = {
+  display: 'flex',
+  justifyContent: 'space-around',
+};
+
+const sectionHeader = {
+  fontWeight: 600,
+  fontSize: '7vw',
+  color: 'black',
+  fontFamily: 'Poppins'
+};
+
+const cardContainer = {
+  ...centerContainer,
+  paddingLeft: '5vw',
+  paddingRight: '5vw',
+  flexWrap: 'wrap'
+};
+
+const card = {
+  width: '30vw',
+  minWidth: 250,
+  margin: '3vw'
+};
 
 export {
-  bodyText
+  bodyText,
+  centerContainer,
+  sectionHeader,
+  cardContainer,
+  card
 };
 
 // Gatsby requires a default export

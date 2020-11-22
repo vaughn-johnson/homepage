@@ -6,14 +6,16 @@ const Footer = () => {
   return (
     <div style={styles.footerContainer}>
       <div style={{ margin: '3vw' }}>
-        <div
-          style={styles.imageBackdrop}>
-          <img
-            style={styles.image}
-            src={Signature}
-            alt="Vaughn Johnson"
-          />
-        </div>
+        <a href="https://www.youtube.com/watch?v=FXbEoAqkU8M">
+          <div
+            style={styles.imageBackdrop}>
+            <img
+              style={styles.image}
+              src={Signature}
+              alt="Vaughn Johnson"
+            />
+          </div>
+        </a>
       </div>
     </div>
   )
