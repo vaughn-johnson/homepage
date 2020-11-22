@@ -7,7 +7,7 @@ const Introduction = () => (
     subtitle='What am I trying to understand?'
   >
     <p>
-      First, some context: About a year and a half ago, I was feeling deeply unwell. I had just graduated
+      First, some context: About a year and a half ago, I was feeling unwell. I had just graduated
       college, started my first job, and the gravity of being the custodian of my own life was weighing
       heavily on me. I had experienced depressive episodes like this before and had sought professional
       help. Previously, through my university, I started seeing a therapist and started a

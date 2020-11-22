@@ -372,7 +372,7 @@ message_blocks['word_count'] / message_blocks['response_time']
       loading={loading}
       loadFailed={loadFailed}
       layout={{ 
-        title: "Word count in response per time it took to respond",
+        title: "Response word count per day it took to respond",
         xaxis: { title: 'words / day', rangemode: 'normal' },
         yaxis: { rangemode: 'normal' },
         barmode: "overlay"
@@ -491,8 +491,8 @@ message_blocks['word_count'] / message_blocks['response_time']
       being exchanged between my therapist and me.
     </p>
     <p>
-      Again, I &apos;ve provided the R and Python notebooks I originally used to do these analyses. If you &apos;d
-      like to play with the data yourself, or just get a better view of the plots, I &apos;d
+      Again, I&apos;ve provided the R and Python notebooks I originally used to do these analyses. If you &apos;d
+      like to play with the data yourself, or just get a better view of the plots, I&apos;d
       highly encourage <b><a href="https://github.com/vaughn-johnson/talkspace-notebooks/">checking them out</a></b>.
     </p>
   </Section>
