@@ -1,5 +1,3 @@
-import React from 'react';
-
-const Talkspace = () => (<div>Talkspace</div>);
+import Talkspace from './Talkspace';
 
 export default Talkspace;

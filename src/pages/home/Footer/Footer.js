@@ -1,7 +1,6 @@
 import React from 'react';
 import * as styles from './styles';
-
-const SIGNATURE_URL = "assets/images/signature_invert.png";
+import Signature from 'assets/images/signature_invert.png';
 
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
           style={styles.imageBackdrop}>
           <img
             style={styles.image}
-            src={SIGNATURE_URL}
+            src={Signature}
             alt="Vaughn Johnson"
           />
         </div>

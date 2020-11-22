@@ -6,7 +6,7 @@ const blurryTextBox = {
   fontWeight: 800,
   fontSize: "4.5vw",
   fontFamily: "Poppins",
-  backdropFilter: 'blur(50px)',
+  backdropFilter: 'blur(70px)',
   WebkitBackdropFilter: 'blur(70px)',
   margin: '7vw',
   padding: '1vw'
