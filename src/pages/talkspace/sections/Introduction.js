@@ -53,7 +53,7 @@ const Introduction = () => (
       into what the internal change was. I don&apos;t have access to my historical mood data, but if I did, I would 
       really want to know if I could meaningfully estimate what my <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1495268/">PHQ-9</a>
       {' score'} was on a particular day based on a message. When I asked my therapist what kinds of things
-      he would be interseted in investigating, he brought up detecting suicidal ideation. Like the 
+      he would be interseted in investigating, he brought up detecting suicidal ideation. Like the previous
       question, I don&apos;t have any ground truth to build a model from, but this question really interests me, too. 
     </p>
   </Section>
