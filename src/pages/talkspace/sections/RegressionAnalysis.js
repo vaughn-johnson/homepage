@@ -61,7 +61,7 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
 
     <p>
       The first thing I notice from these results is that this model is not a very good
-      fit. The R squared is very low. Sure, I have some significant results, but 
+      fit. The R<sup>2</sup> is very low. Sure, I have some significant results, but 
       statistical significance is a test of sample size, not whether my model is
       appropriate. Looking to a plot of the residuals is a <i>clear</i> indication
       the relationship between my features and response is non-linear
