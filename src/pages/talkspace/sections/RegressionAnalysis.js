@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section, Plot, CaptionedImage } from 'components';
 import { colors } from 'styles';
+import PropTypes from "prop-types";
 import MessageLengthResults from 'assets/images/talkspace/message-length-results.png';
 import MessageLengthResiduals from 'assets/images/talkspace/message-length-residuals.png';
 import ResponseTimeResults from 'assets/images/talkspace/response-time-results.png'; 
@@ -25,10 +26,10 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
     </p>
     <p>
       To be clear, this data is not perfectly suited for linear regression. The response variables
-      I'm interested in does not appear to be normally distributed with any of its covariates,
-      and the covariants aren't perfectly non-collinear. The observations are obviously not independent
-      (though my response time, message length, and message length over response time don't seem
-      to show any obvious autocorrelation). However, I think it's still worth taking a look.
+      I&apos;m interested in does not appear to be normally distributed with any of its covariates,
+      and the covariants aren&apos;t perfectly non-collinear. The observations are obviously not independent
+      (though my response time, message length, and message length over response time don&apos;t seem
+      to show any obvious autocorrelation). However, I think it&apos;s still worth taking a look.
     </p>
 
     <p>
@@ -49,8 +50,8 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
     </ol>
 
     <p>
-      At this point, it's farily easy to set up three regressions for my three response
-      variables. Let's first look at message length. I'll fit a model, look at some 
+      At this point, it&apos;s farily easy to set up three regressions for my three response
+      variables. Let&apos;s first look at message length. I&apos;ll fit a model, look at some 
       results and some diagnotistic plots.
     </p>
   
@@ -93,16 +94,16 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
       </div>
     </div>
     <p>
-      While these results aren't particularly spectacular, they're still informative.
-      We can say pretty confidently that there isn't an obvious linear relationship
+      While these results aren&apos;t particularly spectacular, they&apos;re still informative.
+      We can say pretty confidently that there isn&apos;t an obvious linear relationship
       between any of the measurements of engagment I have and the messages from my
       therapist. It also gives great indications for areas to look at next. For both
       response time and message length, there is a statistically significant relationship
-      with the length of my therapist's messages, but that relationship doesn't show
-      up when I regress on the ratio of those two values. While the effect isn't very
-      strong, and certainly isn't linear, there's definitley <i>something</i> there.
+      with the length of my therapist&apos;s messages, but that relationship doesn&apos;t show
+      up when I regress on the ratio of those two values. While the effect isn&apos;t very
+      strong, and certainly isn&apos;t linear, there&apos;s definitley <i>something</i> there.
       This is probably an indication that my response times and message lengths are
-      positively correlated, which is why their ratio doesn't have any significant
+      positively correlated, which is why their ratio doesn&apos;t have any significant
       covariates.
     </p>
     <Plot
@@ -128,5 +129,11 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
 
   </Section>
 );
+
+RegressionAnalysis.propTypes = {
+  messageData: PropTypes.object,
+  loading: PropTypes.bool,
+  loadFailed: PropTypes.bool
+};
 
 export default RegressionAnalysis; 
