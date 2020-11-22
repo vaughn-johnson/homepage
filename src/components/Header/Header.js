@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <div style={header}>
       <div style={{ height: '100%' }}>
-        <img style={{ height: "90%" }} src={signature} alt="😉" />
+        <a href="/">
+          <img style={{ height: "90%" }} src={signature} alt="😉" />
+        </a>
       </div>
       <div>
         <HomeButton />
