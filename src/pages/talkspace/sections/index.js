@@ -3,12 +3,14 @@ import Introduction from './Introduction';
 import GettingTheData from './GettingTheData';
 import ExploringMyData from './ExploringMyData';
 import RegressionAnalysis from './RegressionAnalysis';
+import Conclusion from './Conclusion';
 
 export {
   Introduction,
   GettingTheData,
   ExploringMyData,
-  RegressionAnalysis 
+  RegressionAnalysis,
+  Conclusion
 };
 
 // Gatsby requires a default export

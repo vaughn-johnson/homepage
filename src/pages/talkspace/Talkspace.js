@@ -4,7 +4,8 @@ import {
   Introduction,
   GettingTheData,
   ExploringMyData,
-  RegressionAnalysis
+  RegressionAnalysis,
+  Conclusion
 } from './sections';
 import axios from 'axios';
 import Pills from 'assets/images/talkspace/pills.jpg';
@@ -61,6 +62,7 @@ const Talkspace = () => {
         loading={loading}
         loadFailed={loadFailed}
       />
+      <Conclusion />
     </div>
   );
 }
