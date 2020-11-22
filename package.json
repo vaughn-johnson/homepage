@@ -20,6 +20,7 @@
     "gatsby": "^2.25.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "plotly.js": "^1.57.1",
+    "random-emoji": "^1.0.2",
     "react": "^16.12.0",
     "react-code-blocks": "^0.0.8",
     "react-dom": "^17.0.1",
