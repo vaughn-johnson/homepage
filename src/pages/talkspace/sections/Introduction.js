@@ -44,7 +44,7 @@ const Introduction = () => (
       fabulous to be able to characterize something about my therapist&apos;s messages that causes me to engage. That&apos;s
       valuable information not just for me, but for my therapist. Moreso, if I find an effect that
       generalizes to other people, then I could potentially not only help my therapist&apos;s <i>other</i> clients,
-      but an enourmous and growing pool of people who used texted based therapy.
+      but an enourmous and growing pool of people who use text-based therapy.
     </p>
     <p>
       The last thing I want to look at is: <b>Can I tell a difference in my messages over time, and what is that
@@ -54,7 +54,7 @@ const Introduction = () => (
       really want to know if I could meaningfully estimate what my <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1495268/">PHQ-9</a>
       {' score'} was on a particular day based on a message. When I asked my therapist what kinds of things
       he would be interseted in investigating, he brought up detecting suicidal ideation. Like the previous
-      question, I don&apos;t have any ground truth to build a model from, but this question really interests me, too. 
+      question I don&apos;t have any ground truth to build a model from, but this question also really interests me. 
     </p>
   </Section>
 );
