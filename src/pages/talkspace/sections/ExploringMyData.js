@@ -11,7 +11,7 @@ const ExploringMyData = ({ messageData, loading, loadFailed }) => (
     <p>
       Now that I have my data, let&apos;s explore it. The data I have is in the form of an
       array of JSON objects, each with identical structures representing one individual
-       &quot;text &quot; exchanged in Talkspace. The messages I scraped include automated messages
+       &quot;text&quot; exchanged in Talkspace. The messages I scraped include automated messages
       from the application itself prompting me to fill out forms and questionaires. Luckily,
       knowing which texts are sent from a human and which are not is also pertinent to the
       application, so Talkspace denotes these different modes of message with a field
@@ -331,9 +331,9 @@ message_blocks['word_count'] / message_blocks['response_time']
 
     <p>
       The features I &apos;m intersted in explaining (response time and word count per day)
-      both show noticeable differences across my therapist &apos;s messages and my own.
+      both show noticeable differences across my therapist&apos;s messages and my own.
       My response times are much more variable, and on average much longer than
-      my therapist &apos;s.
+      my therapist&apos;s.
 
     </p>
 
@@ -447,11 +447,11 @@ message_blocks['word_count'] / message_blocks['response_time']
     />
     <p>
       As you can see from the plots, there is a slight relationship between previous word count and question
-      count, which seems plausible. Other than that, there isn &apos;t an obvious relationship anywhere.
+      count, which seems plausible. Other than that, there isn&apos;t an obvious relationship anywhere.
     </p>
     <p>
-      Finally, I &apos;d like to look at my messages overd time, 
-      which should give a sense of how I &apos;ve used the service over the last year
+      Finally, I&apos;d like to look at my messages over time, 
+      which should give a sense of how I&apos;ve used the service over the last year
     </p>
     <Plot
       loading={loading}
@@ -491,7 +491,7 @@ message_blocks['word_count'] / message_blocks['response_time']
       being exchanged. 
     </p>
     <p>
-      Again, I&apos;ve provided the R and Python notebooks I originally used to do these analyses. If you &apos;d
+      Again, I&apos;ve provided the R and Python notebooks I originally used to do these analyses. If you&apos;d
       like to play with the data yourself, or just get a better view of the plots, I&apos;d
       highly encourage <b><a href="https://github.com/vaughn-johnson/talkspace-notebooks/">checking them out</a></b>.
     </p>

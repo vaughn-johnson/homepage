@@ -12,12 +12,12 @@ const GettingTheData = () => (
     subtitle='How I got, and how you can too'
   >
     <p>
-      Now that I have a relatively clear picture of questions I&apos;m trying to answer,
+      Now that I have a relatively clear picture of the questions I&apos;m trying to answer,
       I need to actually get my data. Talkspace has no button to download all of your
       data (To be totally candid, there probably <i>ought</i> to be one, but I dream).
       Another option is writing a utility that would parse the data from an HTML document.
       I checked, and it wasn&apos;t particularly hard to scroll to the beginning of my message
-      history, and I could write something using selenium or detox to automatically
+      history, and I could write something using Selenium or Detox to automatically
       scroll to the beginning. However, this approach isn&apos;t ideal
       for two main reasons:
     </p>
@@ -79,8 +79,8 @@ const GettingTheData = () => (
     <p>
       Now that I have my data, I want to be able to show you, the audience reading this, some
       of the interesting things I found. However, I <i>obviously</i> don&apos;t want to reveal
-      my entire message history with my personal therapist to the open internet. I am,
-      however, comfortable sharing <i>some</i> information, such as how often I send messages
+      my entire message history with my personal therapist to the open internet. That being said,
+      I <i>am</i> comfortable sharing <i>some</i> information, such as how often I send messages
       and how long my messages are. With that in mind, I built a public API that takes requests
       for my scraped messages, extracts relevant features I&apos;m comfortable sharing, and
       responds with the results in JSON. I&apos;ll explain the specific features I&apos;m extracting
@@ -89,7 +89,7 @@ const GettingTheData = () => (
       You can view the source code running there
       at <a href='https://github.com/vaughn-johnson/talkspace-public-api'>my Github</a> and
       you can use the API
-      yourself <a href="https://us-central1-talkspace-293821.cloudfunctions.net/talkspace-public-api">here</a> (results
+      yourself <a href="https://us-central1-talkspace-293821.cloudfunctions.net/talkspace-public-api?format=json">here</a> (results
       are cached once a day).
     </p>
     
