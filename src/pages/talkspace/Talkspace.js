@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TitleCard, Header } from 'components';
 import {
+  Abstract,
   Introduction,
   GettingTheData,
   ExploringMyData,
@@ -50,6 +51,7 @@ const Talkspace = () => {
       <TitleCard image={Pills}>
         Mining my own therapy data
       </TitleCard>
+      <Abstract />
       <Introduction />
       <GettingTheData />
       <ExploringMyData
