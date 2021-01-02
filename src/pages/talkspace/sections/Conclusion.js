@@ -13,10 +13,10 @@ const Conclusion = () => (
       to me. I also took away that the &quot;velocity&quot; of my message writing seems to
       vary a lot. If you look at the residuals plot for message length over
       response time, you can clearly see two outliers. I looked up both of those
-      messages, and the content and context of those messages wasn&apos;t particuarly
+      messages, and the content and context of those messages wasn&apos;t particularly
       special or interesting. This indicates to me that whatever mechanism there is
-      that causes me to sometimes reduce my engagment with Talkspace, it&apos;s more complicated
-      and nuanced that the factors I looked at here.
+      that causes me to sometimes reduce my engagement with Talkspace, it&apos;s more complicated
+      and nuanced than the factors I looked at here.
     </p>
     <p>
       With that being said, the next thing I&apos;d like to do is build a language model to
