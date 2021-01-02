@@ -12,7 +12,7 @@ const ExploringMyData = ({ messageData, loading, loadFailed }) => (
       Now that I have my data, let&apos;s explore it. The data I have is in the form of an
       array of JSON objects, each with identical structures representing one individual
        &quot;text&quot; exchanged in Talkspace. The messages I scraped include automated messages
-      from the application itself prompting me to fill out forms and questionaires. Luckily,
+      from the application itself prompting me to fill out forms and questionnaires. Luckily,
       knowing which texts are sent from a human and which are not is also pertinent to the
       application, so Talkspace denotes these different modes of message with a field
       called <code>message_type</code>. This is easily filtered by MongoDB, and immediately
@@ -56,7 +56,7 @@ messages = pd.DataFrame([
         the beginning of our messages. Luckily, I always delimit these quotations with a <code>{'>'}</code>.
       </li>
       <li>
-        My therpist consistently greets me with <code>Vaughn, ...</code>, and signs off
+        My therapist consistently greets me with <code>Vaughn, ...</code>, and signs off
         with <code>Respectfully, Dallas</code>
       </li>
     </ul>
@@ -100,7 +100,7 @@ messages.message = messages.message.apply(
     <p>
       Now that I have some relatively clean text, it&apos;s time to consolidate consecutive messages
       to make analysis simpler. Nearly always, I will respond to my therapist with multiple messages.
-      Each individual message is part of a single reponse, but in the data I scraped, they appear
+      Each individual message is part of a single response, but in the data I scraped, they appear
       as individual records. The abstraction I&apos;d like to work with is that each 
       consecutive <i>block</i> of messages from the same person is considered an individual response.
       I can then redefine some basic aspects of these messages in terms of aggregate functions like
@@ -127,7 +127,7 @@ messages.message = messages.message.apply(
   `}
     />
     <p>
-      Now I can start to come up with some simple features to characterize these messages. The simplest things that immedately
+      Now I can start to come up with some simple features to characterize these messages. The simplest things that immediately
       come to mind are
     </p>
     <ul>
@@ -165,7 +165,7 @@ message_blocks['readability'] =
 }
     />
     <p>
-      I can also start to think about some measures of my engagment. The thing that come to mind are
+      I can also start to think about some measures of my engagement. The thing that come to mind are
     </p>
     <ul>
       <li>How quickly do I respond to my therapist</li>
@@ -245,7 +245,7 @@ message_blocks['word_count'] / message_blocks['response_time']
       loadFailed={loadFailed}
       layout={{ 
         title: "Number of questions asked",
-        xaxis: { title: 'Count of occurences of "?"', rangemode: 'normal' },
+        xaxis: { title: 'Count of occurrences of "?"', rangemode: 'normal' },
         yaxis: { rangemode: 'normal' },
         barmode: "overlay"
       }}
@@ -330,7 +330,7 @@ message_blocks['word_count'] / message_blocks['response_time']
     />
 
     <p>
-      The features I &apos;m intersted in explaining (response time and word count per day)
+      The features I &apos;m interested in explaining (response time and word count per day)
       both show noticeable differences across my therapist&apos;s messages and my own.
       My response times are much more variable, and on average much longer than
       my therapist&apos;s.

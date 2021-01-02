@@ -28,7 +28,7 @@ const GettingTheData = () => (
         seems crucial for this project to be useful to other people
       </li>
       <li>
-        The HTML representation does not match up very with the abstraction I&apos;m trying
+        The HTML representation does not match up very well with the abstraction I&apos;m trying
         to work with, which is individual messages with consistent fields {'like '}
         <code>author</code>{' or '}<code>created_at</code>.
       </li>

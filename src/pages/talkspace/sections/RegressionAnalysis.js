@@ -18,7 +18,7 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
       I want to develop a model that explains my engagement. I think an imperfect but at
       least obvious and accessible proxy is my responsiveness. I have a simple hypothesis:
       I tend to be overwhelmed by long messages that are hard to read and
-      contain lots of questions. Specificaly, I think I tend to take longer to respond,
+      contain lots of questions. Specifically, I think I tend to take longer to respond,
       and have less to say. If I had to take a guess, I would assume that these would have
       a roughly linear relationship. That is, I imagine for every additional question my
       therapist asks me, I take some additional unit time to respond. With that kind of model,
@@ -33,7 +33,7 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
     </p>
 
     <p>
-      The way I see it, I think I have three explanatory varaibles and three response variables.
+      The way I see it, I think I have three explanatory variables and three response variables.
       My response variables are 
     </p>
     <ol>
@@ -50,9 +50,9 @@ const RegressionAnalysis = ({ messageData, loading, loadFailed }) => (
     </ol>
 
     <p>
-      At this point, it&apos;s farily easy to set up three regressions for my three response
+      At this point, it&apos;s fairly easy to set up three regressions for my three response
       variables. Let&apos;s first look at message length. I&apos;ll fit a model, look at some 
-      results and some diagnotistic plots.
+      results and some diagnostic plots.
     </p>
   
     <CaptionedImage
